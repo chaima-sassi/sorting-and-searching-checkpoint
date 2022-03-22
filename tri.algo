@@ -1,0 +1,14 @@
+PROCEDURE simple_sorting(tab:array of INTEGER)
+VAR
+    i,j,key:= integer
+BEGIN
+  FOR i FROM 0 TO tab.length STEP 1  DO
+     key := arr{i}
+     j:=i-1
+     WHILE (j>=0 && arr[i]>key) DO
+        arr[j+1]=arr[j]
+        j=j-1
+     END_WHILE
+     arr[j+1]= key
+  END_FOR
+END
